@@ -3,7 +3,6 @@ import React from 'react';
 const PricingComponent = () => {
   return (
     <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 text-center">
-      {/* Header Section */}
       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Flexible Plans, Transparent Pricing
       </h2>
@@ -14,7 +13,6 @@ const PricingComponent = () => {
         30-day free trial with money-back guarantee.
       </p>
 
-      {/* Pricing Table */}
       <div className="mt-12 max-w-4xl mx-auto">
         <h3 className="text-2xl font-semibold text-gray-800">Compare our plans</h3>
         <div className="mt-8 overflow-x-auto">
