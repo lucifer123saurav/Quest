@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import AppleIcon from '../logo/apple-icon-4.png'
+import AppleIcon from '../logo/apple-icon-4.png';
 import GooglePlayIcon from '../logo/google-play-store-icon-logo-symbol-free-png.webp';
+
 const Plans = () => {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <div className="flex flex-col items-center p-6  min-h-screen">
-      <h2 className="text-3xl font-semibold text-center">
+    <div className="flex flex-col items-center p-6 min-h-screen">
+      <h2 className="text-2xl sm:text-3xl font-semibold text-center">
         Choose Plan <br /> That's Right For You
       </h2>
-      <p className="text-gray-600 text-center mt-2">
+      <p className="text-gray-600 text-center mt-2 max-w-lg">
         Simple and transparent pricing. Start for free, upgrade when you love it.
         <br />
         <span className="text-red-500 font-semibold">30 day free trial in a button</span>
       </p>
-      <p className="text-center mt-4">
-        Running a <span className="font-semibold">Growth Business or Enterprise?</span> Let's connect - 
+      <p className="text-center mt-4 max-w-md">
+        Running a <span className="font-semibold">Growth Business or Enterprise?</span> Let's connect -
         <button className="ml-2 text-red-500 font-semibold">Talk to Sales</button>
       </p>
 
@@ -40,8 +41,8 @@ const Plans = () => {
         <span className="ml-2 text-red-500 font-semibold">SAVE 25%</span>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8 mt-8">
-        <div className="border border-gray-200 rounded-lg p-6 w-full md:w-64 bg-white">
+      <div className="flex flex-col md:flex-row gap-8 mt-8 w-full max-w-4xl">
+        <div className="border border-gray-200 rounded-lg p-6 w-full bg-white flex-1 md:max-w-sm">
           <h3 className="text-lg font-semibold text-gray-600">STARTER</h3>
           <div className="flex items-center mt-4">
             <span className="text-3xl font-bold">${isYearly ? 15 : 17}</span>
@@ -71,7 +72,7 @@ const Plans = () => {
           <p className="text-sm text-gray-500 mt-2 text-center">No credit card required</p>
         </div>
 
-        <div className="border border-gray-200 rounded-lg p-6 w-full md:w-64 bg-white">
+        <div className="border border-gray-200 rounded-lg p-6 w-full bg-white flex-1 md:max-w-sm">
           <h3 className="text-lg font-semibold text-gray-600">PREMIUM</h3>
           <div className="flex items-center mt-4">
             <span className="text-3xl font-bold">${isYearly ? 66 : 88}</span>
@@ -95,7 +96,7 @@ const Plans = () => {
               <span className="text-green-500 mr-2">✔</span> Life Time Updates
             </li>
           </ul>
-          <button className="mt-6 w-full py-2 text-white bg-customRed rounded-lg font-semibold">
+          <button className="mt-6 w-full py-2 text-white bg-red-500 rounded-lg font-semibold">
             Get Started
           </button>
           <p className="text-sm text-gray-500 mt-2 text-center">No credit card required</p>
@@ -107,30 +108,18 @@ const Plans = () => {
       <div className="mt-12 text-center">
         <h3 className="text-xl font-semibold">Manage Your Business On the Go</h3>
         <p className="text-gray-500 mt-2 max-w-lg mx-auto">
-          With free Business Mobile App, you can manage your entire service business from anywhere. Stay connected and stay in control, no matter where your day takes you.
+          With our free Business Mobile App, you can manage your entire service business from anywhere.
+          Stay connected and stay in control, no matter where your day takes you.
         </p>
-        <div className="flex justify-center gap-4 mt-6">
-            <div className='bg-gray-50 flex border rounded-md'>
-                <img
-                src={AppleIcon}
-                alt="App Logo"
-                className="w-8 h-8 object-contain" 
-                />
-                <button className=" px-2 py-2 rounded-lg text-black font-medium">
-                App Store
-                </button>
-            </div>
-            
-            <div className='bg-gray-50 flex border rounded-md'>
-            <img
-            src={GooglePlayIcon}
-            alt="Playstore Logo"
-            className="w-8 h-8 object-contain" 
-            />
-            <button className=" px-2 py-2 rounded-lg text-black font-medium">
-            Google Play
-            </button>
-        </div>
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+          <div className="bg-gray-50 flex items-center border rounded-md px-4 py-2">
+            <img src={AppleIcon} alt="App Logo" className="w-8 h-8 object-contain mr-2" />
+            <button className="text-black font-medium">App Store</button>
+          </div>
+          <div className="bg-gray-50 flex items-center border rounded-md px-4 py-2">
+            <img src={GooglePlayIcon} alt="Playstore Logo" className="w-8 h-8 object-contain mr-2" />
+            <button className="text-black font-medium">Google Play</button>
+          </div>
         </div>
       </div>
     </div>
