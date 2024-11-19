@@ -30,6 +30,6 @@ export const ServiceProviders = () => {
       
     ];
   return (
-    <CustomGridComponent features={features} heading = {heading} paragraph = {paragraph}/>
+    <CustomGridComponent features={features} heading = {heading} paragraph = {paragraph} component ={"ServiceProviders"}/>
   )
 }
